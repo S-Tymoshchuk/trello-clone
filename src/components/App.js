@@ -33,8 +33,9 @@ class App extends Component {
                                                            listId={list.id} index={index}/>;
                                     })
                                 }
-                                <TrelloActionButton/>
                                 {provided.placeholder}
+                                <TrelloActionButton/>
+
                             </ListStyle>
                         )
                     }
