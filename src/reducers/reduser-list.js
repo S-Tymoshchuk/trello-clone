@@ -68,9 +68,16 @@ const listReducer = (state = initial, action) => {
                 droppableIdEnd,
                 droppableIndexStart,
                 droppableIndexEnd,
-                draggableId
+                draggableId,
+                type
             } = action.payload;
             const newState = [...state];
+            if (type === "list") {
+                const newList = newState.splice(droppableIndexStart, 1);
+                newState.splice(droppableIndexEnd, 0, ...newList);
+                return newState;
+            }
+
             //same list
             if (droppableIdStart === droppableIdEnd) {
 
@@ -108,7 +115,8 @@ export const sort = (
     droppableIdEnd,
     droppableIndexStart,
     droppableIndexEnd,
-    draggableId
+    draggableId,
+    type
 ) => {
     return {
         type: DRAG_HAPPEND,
@@ -117,7 +125,8 @@ export const sort = (
             droppableIdEnd,
             droppableIndexStart,
             droppableIndexEnd,
-            draggableId
+            draggableId,
+            type
         }
     };
 };

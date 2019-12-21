@@ -3,7 +3,7 @@ import TrelloList from "./trelloList";
 import {connect} from "react-redux";
 import styled from "styled-components";
 import TrelloActionButton from "./trelloActionButton";
-import {DragDropContext} from "react-beautiful-dnd";
+import {DragDropContext, Droppable} from "react-beautiful-dnd";
 import {sort} from "../reducers/reduser-list";
 
 
@@ -12,25 +12,34 @@ class App extends Component {
     onDragEnd = (result) => {
         // the only one that is required
         console.log(result);
-        const {destination, source, draggableId} = result;
+        const {destination, source, draggableId, type} = result;
         if (!destination) {
             return;
         }
-        this.props.dispatch(sort(source.droppableId, destination.droppableId, source.index, destination.index, draggableId));
+        this.props.dispatch(sort(source.droppableId, destination.droppableId, source.index, destination.index, draggableId,type));
     };
 
     render() {
         let {lists} = this.props;
         return (
             <DragDropContext onDragEnd={this.onDragEnd}>
-                <ListStyle>
+                <Droppable droppableId="all-lists" direction="horizontal" type="list">
                     {
-                        lists.map((list) => {
-                            return <TrelloList key={list.id} title={list.title} cards={list.card} listId={list.id}/>;
-                        })
+                        (provided) => (
+                            <ListStyle ref={provided.innerRef} {...provided.droppableProps}>
+                                {
+                                    lists.map((list, index) => {
+                                        return <TrelloList key={list.id} title={list.title} cards={list.card}
+                                                           listId={list.id} index={index}/>;
+                                    })
+                                }
+                                <TrelloActionButton/>
+                                {provided.placeholder}
+                            </ListStyle>
+                        )
                     }
-                    <TrelloActionButton/>
-                </ListStyle>
+
+                </Droppable>
             </DragDropContext>
         );
     }
