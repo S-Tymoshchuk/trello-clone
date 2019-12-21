@@ -86,7 +86,7 @@ class TrelloActionButton extends React.Component {
                     }}>
                         {buttonTitle}
                     </Button>
-                    <Icon>close</Icon>
+                    <Icon style={{cursor: "pointer"}} onClick={this.formClose}>close</Icon>
                 </ButtonFormContainer>
             </div>
         );
