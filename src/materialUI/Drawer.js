@@ -27,11 +27,10 @@ const TemporaryDrawer = (props) => {
     console.log(props);
     const classes = useStyles();
 
-    const sideList = side => (
+    const sideList = () => (
         <div
             className={classes.list}
             role="presentation"
-            onClick={true}
         >
             <List>
                 <ListItem button>
