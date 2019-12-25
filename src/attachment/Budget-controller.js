@@ -7,8 +7,9 @@ import ListTable from "../materialUI/ListTable";
 import {connect} from "react-redux";
 
 const Budget = (props) => {
-    console.log(props);
-    let income = props.totalIncome[0].totalIncome;
+
+    let income = props.total[0].totalIncome;
+    let expenses = props.total[0].totalExpenses;
     return (
         <div>
             <div style={{
@@ -31,7 +32,7 @@ const Budget = (props) => {
                 <Card style={{backgroundColor: "#3F4E65", width: "300px", color: "#ffffff"}}>
                     <CardContent>
                         <Typography variant="body2" color="default" component="div">
-                            Петров {income} грн
+                            Баланс {income - expenses} грн
                         </Typography>
                         <Typography variant="body2" color="default" component="div">
                             Свои счета 131 389грн
@@ -47,7 +48,7 @@ const Budget = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        totalIncome: state.budget
+        total: state.budget
     };
 };
 

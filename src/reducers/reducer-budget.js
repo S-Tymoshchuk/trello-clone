@@ -39,13 +39,19 @@ const budgetReducer = (state = initial, action) => {
 
             });
 
-            let totalIncome = newIncome[0].incomeFlow.map((list) => {
+            let total = newIncome[0].incomeFlow.map((list) => {
                 return list.amount;
 
             }).reduce((accumulator, current) => accumulator + current);
-            console.log(totalIncome);
+
             const result = newIncome.map((list) => {
-                return {...list, totalIncome: totalIncome};
+
+                if (list.incomeFlow[0].type === "Доход") {
+                    return {...list, totalIncome: total};
+                }
+                if (list.incomeFlow[0].type === "Расход") {
+                    return {...list, totalExpenses: total};
+                }
             });
             return result;
 

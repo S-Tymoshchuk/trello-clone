@@ -12,7 +12,7 @@ import TableContainer from "@material-ui/core/TableContainer";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import CancelIcon from "@material-ui/icons/Cancel";
-import React from "react";
+import React, {useEffect} from "react";
 import {connect} from "react-redux";
 import {addBudget, deleteItemAction} from "../reducers/reducer-budget";
 
@@ -46,9 +46,13 @@ const ListTable = (props) => {
         setAmount(e.target.value);
     };
 
+    // useEffect(() => {
+    //     setDescription("");
+    // }, [description, setDescription]);
+
     const addItems = () => {
         props.dispatch(addBudget(currency, description, amount));
-
+        console.log(currency);
     };
     const deleteItem = (id) => {
         props.dispatch(deleteItemAction(id));
