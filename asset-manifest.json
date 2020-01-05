@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.js": "/trello-clone/static/js/main.d7af2134.chunk.js",
-    "main.js.map": "/trello-clone/static/js/main.d7af2134.chunk.js.map",
+    "main.css": "/trello-clone/static/css/main.d172610a.chunk.css",
+    "main.js": "/trello-clone/static/js/main.44cd6371.chunk.js",
+    "main.js.map": "/trello-clone/static/js/main.44cd6371.chunk.js.map",
     "runtime-main.js": "/trello-clone/static/js/runtime-main.e2fc9f5b.js",
     "runtime-main.js.map": "/trello-clone/static/js/runtime-main.e2fc9f5b.js.map",
-    "static/js/2.c68814e6.chunk.js": "/trello-clone/static/js/2.c68814e6.chunk.js",
-    "static/js/2.c68814e6.chunk.js.map": "/trello-clone/static/js/2.c68814e6.chunk.js.map",
+    "static/js/2.d30d09f9.chunk.js": "/trello-clone/static/js/2.d30d09f9.chunk.js",
+    "static/js/2.d30d09f9.chunk.js.map": "/trello-clone/static/js/2.d30d09f9.chunk.js.map",
     "index.html": "/trello-clone/index.html",
-    "precache-manifest.939dd4c8db5ba721ce4ed2b3e0ac237b.js": "/trello-clone/precache-manifest.939dd4c8db5ba721ce4ed2b3e0ac237b.js",
+    "precache-manifest.1f4056f1205a0c9732f0e9eca98f669d.js": "/trello-clone/precache-manifest.1f4056f1205a0c9732f0e9eca98f669d.js",
     "service-worker.js": "/trello-clone/service-worker.js",
-    "static/js/2.c68814e6.chunk.js.LICENSE": "/trello-clone/static/js/2.c68814e6.chunk.js.LICENSE"
+    "static/css/main.d172610a.chunk.css.map": "/trello-clone/static/css/main.d172610a.chunk.css.map",
+    "static/js/2.d30d09f9.chunk.js.LICENSE": "/trello-clone/static/js/2.d30d09f9.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.e2fc9f5b.js",
-    "static/js/2.c68814e6.chunk.js",
-    "static/js/main.d7af2134.chunk.js"
+    "static/js/2.d30d09f9.chunk.js",
+    "static/css/main.d172610a.chunk.css",
+    "static/js/main.44cd6371.chunk.js"
   ]
 }

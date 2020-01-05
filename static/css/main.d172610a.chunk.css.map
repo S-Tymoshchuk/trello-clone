@@ -1,0 +1,1 @@
+{"version":3,"sources":["ListTable.css"],"names":[],"mappings":"AAAA,cAEI,mCAEJ,CAEA,gBACI,oCACJ","file":"main.d172610a.chunk.css","sourcesContent":[".incomeAmount {\r\n    /*//background-color: #5bb80d !important;*/\r\n    background-color: rgba(91, 184, 13, .4);\r\n\r\n}\r\n\r\n.ExpensesAmount {\r\n    background-color: rgba(255, 75, 104, .4);\r\n}"]}
